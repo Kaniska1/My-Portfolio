@@ -117,7 +117,7 @@ export default function Portfolio() {
           <div className="bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 flex flex-col md:flex-row items-center backdrop-filter backdrop-blur-lg">
             <div className="md:w-1/2 mb-8 md:mb-0">
               <Image
-                src="/images/profile-picture.jpg"
+                src="/profile-picture.jpg"
                 alt="Kaniska"
                 width={300}
                 height={300}
