@@ -120,7 +120,7 @@ export default function Portfolio() {
         <div className="bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 max-w-2xl mx-auto mb-8 relative">
           <Quote className="absolute top-4 left-4 text-purple-500" size={24} />
           <p className="text-lg font-montserrat italic text-center px-8">
-            "You either die a hero, or live long enough to see your code run into "Time Limit Exceeded Error (1016/1017 cases passed)" "
+            "You either die a hero, or live long enough to see your code run into &quot;Time Limit Exceeded Error (1016/1017 cases passed)&quot; "
           </p>
         </div>
 
