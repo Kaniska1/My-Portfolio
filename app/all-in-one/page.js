@@ -20,17 +20,25 @@ export default function Portfolio() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else if (theme === 'light') {
-      document.documentElement.classList.remove('dark');
-    } else {
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    const applyTheme = () => {
+      if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
       } else {
         document.documentElement.classList.remove('dark');
       }
-    }
+    };
+
+    applyTheme();
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = () => {
+      if (theme === 'system') {
+        applyTheme();
+      }
+    };
+
+    mediaQuery.addListener(handleChange);
+    return () => mediaQuery.removeListener(handleChange);
   }, [theme]);
 
   useEffect(() => {
