@@ -104,8 +104,7 @@ export default function Portfolio() {
         <section id="home" className="text-center py-20">
           <h2 className="text-6xl font-bold mb-4 animate-pulse font-object-sans">Hi, I am Kaniska</h2>
           <Image
-            src="/images/profile-picture.jpg"
-            alt="Kaniska"
+            src="/Untitled-1.png"
             width={300}
             height={300}
             className="mx-auto rounded-full border-4 border-purple-500"
