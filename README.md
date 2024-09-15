@@ -1,2 +1,2 @@
-# My-Portfolio
+# Portfolio
 A simple portfolio website
