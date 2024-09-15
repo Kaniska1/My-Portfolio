@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Instagram, Linkedin, Github, Moon, Sun, Computer, Code, Palette, Mic } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const Loader = () => (
   <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-purple-100 dark:bg-gray-900 z-50">
@@ -128,7 +127,7 @@ export default function Portfolio() {
             <div className="md:w-1/2 md:pl-8">
               <h3 className="text-3xl font-bold mb-4 font-object-sans">About Me</h3>
               <p className="text-lg font-montserrat">
-                👋 Hi! I'm Kaniska, a passionate computer science engineering student with a focus on AI, ML, Data Science, and Blockchain. I've embraced both theoretical knowledge and hands-on projects, driven by curiosity. Eager to tackle real-world problems, I aim to contribute to innovative solutions and continuously grow through learning and collaboration.
+                👋 Hi! I&apos;m Kaniska, a passionate computer science engineering student with a focus on AI, ML, Data Science, and Blockchain. I have embraced both theoretical knowledge and hands-on projects, driven by curiosity. Eager to tackle real-world problems, I aim to contribute to innovative solutions and continuously grow through learning and collaboration.
               </p>
             </div>
           </div>
