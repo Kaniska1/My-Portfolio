@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram, Linkedin, Github, Moon, Sun, Computer, Code, Palette, Mic } from 'lucide-react';
+import { Menu, X, Instagram, Linkedin, Github, Moon, Sun, Computer, Code, Palette, Mic, Quote } from 'lucide-react';
 import Image from 'next/image';
 
 const Loader = () => (
@@ -21,11 +21,10 @@ export default function Portfolio() {
 
   useEffect(() => {
     const applyTheme = () => {
-      if (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
+      const root = window.document.documentElement;
+      const isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      root.classList.remove('light', 'dark');
+      root.classList.add(isDark ? 'dark' : 'light');
     };
 
     applyTheme();
@@ -53,13 +52,11 @@ export default function Portfolio() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const toggleTheme = () => {
-    if (theme === 'dark') {
-      setTheme('light');
-    } else if (theme === 'light') {
-      setTheme('system');
-    } else {
-      setTheme('dark');
-    }
+    setTheme(prevTheme => {
+      if (prevTheme === 'dark') return 'light';
+      if (prevTheme === 'light') return 'system';
+      return 'dark';
+    });
   };
 
   if (isLoading) {
@@ -76,7 +73,7 @@ export default function Portfolio() {
       </div>
 
       {/* Navbar */}
-      <nav className="bg-white dark:bg-black bg-opacity-50 dark:bg-opacity-50 p-4 relative z-10">
+      <nav className="bg-white dark:bg-black bg-opacity-50 dark:bg-opacity-50 p-4 fixed top-0 left-0 right-0 z-50">
         <div className="container mx-auto flex justify-between items-center">
           <h1 className="text-2xl font-bold font-object-sans">Kaniska</h1>
           <div className="hidden md:flex space-x-4">
@@ -107,10 +104,10 @@ export default function Portfolio() {
       </nav>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-8 relative z-10">
+      <main className="container mx-auto px-4 py-8 relative z-10 mt-16">
         {/* Home Section */}
         <section id="home" className="text-center py-20">
-          <h2 className="text-6xl font-bold mb-4 animate-pulse font-object-sans">Hi, I am Kaniska</h2>
+          <h2 className="text-6xl font-bold mb-12 animate-pulse font-object-sans">Hi, I am Kaniska!</h2>
           <Image
             src="/Untitled-1.png"
             width={300}
@@ -119,19 +116,27 @@ export default function Portfolio() {
           />
         </section>
 
+        {/* Quote Section */}
+        <div className="bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 max-w-2xl mx-auto mb-8 relative">
+          <Quote className="absolute top-4 left-4 text-purple-500" size={24} />
+          <p className="text-lg font-montserrat italic text-center px-8">
+            "You either die a hero, or live long enough to see your code run into "Time Limit Exceeded Error (1016/1017 cases passed)" "
+          </p>
+        </div>
+
         {/* About Section */}
         <section id="about" className="my-20">
-          <div className="bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 flex flex-col md:flex-row items-center backdrop-filter backdrop-blur-lg">
-            <div className="md:w-1/2 mb-8 md:mb-0">
+          <div className="bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 max-w-4xl mx-auto flex flex-col md:flex-row items-center backdrop-filter backdrop-blur-lg">
+            <div className="md:w-1/3 mb-8 md:mb-0 flex justify-center">
               <Image
                 src="/profile-picture.jpg"
                 alt="Kaniska"
-                width={300}
-                height={300}
+                width={200}
+                height={200}
                 className="rounded-full border-4 border-purple-500"
               />
             </div>
-            <div className="md:w-1/2 md:pl-8">
+            <div className="md:w-2/3 md:pl-8">
               <h3 className="text-3xl font-bold mb-4 font-object-sans">About Me</h3>
               <p className="text-lg font-montserrat">
                 👋 Hi! I&apos;m Kaniska, a passionate computer science engineering student with a focus on AI, ML, Data Science, and Blockchain. I have embraced both theoretical knowledge and hands-on projects, driven by curiosity. Eager to tackle real-world problems, I aim to contribute to innovative solutions and continuously grow through learning and collaboration.
@@ -193,9 +198,23 @@ export default function Portfolio() {
         <section id="projects" className="my-20">
           <h3 className="text-3xl font-bold mb-8 text-center font-object-sans">My Projects</h3>
           <div className="bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-6 backdrop-filter backdrop-blur-lg border border-purple-500">
-            <h4 className="text-xl font-semibold mb-2 font-object-sans">AquaSolve - pHighters</h4>
-            <p className="font-montserrat mb-4">A product designed to mitigate ocean acidification and to create valuable products from the extracted acids, fostering a harmonious relationship between environmental conservation and collaborative innovation for the betterment of both businesses and charitable causes.</p>
-            <a href="https://phighters.netlify.app" target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:text-purple-600 transition-colors font-montserrat">View Project</a>
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="md:w-1/3 mb-4 md:mb-0 md:mr-6">
+                <Image
+                  src="/pHighters.png?height=300&width=300"
+                  alt="AquaSolve - pHighters"
+                  width={300}
+                  height={300}
+                  className="rounded-lg"
+                />
+              </div>
+              <div className="md:w-2/3">
+                <h4 className="text-xl font-semibold mb-2 font-object-sans">AquaSolve - pHighters</h4>
+                <p className="font-montserrat mb-4">A product designed to mitigate ocean acidification and to create valuable products from the extracted acids, fostering a harmonious relationship between environmental conservation and collaborative innovation for the betterment of both businesses and charitable causes.</p>
+                <p className="font-montserrat mb-4">Our team was awarded the Runners-Up position for this project in the On-Campus Hult Prize competition.</p>
+                <a href="https://phighters.netlify.app" target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:text-purple-600 transition-colors font-montserrat">View Project</a>
+              </div>
+            </div>
           </div>
         </section>
       </main>
@@ -203,13 +222,13 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="bg-white dark:bg-black bg-opacity-50 dark:bg-opacity-50 py-8 relative z-10">
         <div className="container mx-auto px-4 flex justify-center space-x-6">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors">
+          <a href="https://www.instagram.com/just_me_tbf/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors">
             <Instagram />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors">
+          <a href="https://www.linkedin.com/in/kaniska-mitra-a015a42b8/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors">
             <Linkedin />
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors">
+          <a href="https://github.com/Kaniska1" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors">
             <Github />
           </a>
         </div>
