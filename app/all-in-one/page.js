@@ -106,15 +106,25 @@ export default function Portfolio() {
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8 relative z-10 mt-16">
         {/* Home Section */}
+        {/* Home Section */}
         <section id="home" className="text-center py-20">
-          <h2 className="text-6xl font-bold mb-12 animate-pulse font-object-sans">Hi, I am Kaniska</h2>
+          <h2 className="text-6xl font-bold mb-12 animate-pulse font-object-sans">Hi, I am Kaniska!</h2>
           <Image
             src="/Untitled-1.png"
             width={300}
             height={300}
+            alt="Kaniska's profile"
             className="mx-auto rounded-full border-4 border-purple-500"
           />
         </section>
+
+        {/* Quote Section */}
+        <div className="bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 max-w-2xl mx-auto mb-8 relative">
+          <Quote className="absolute top-4 left-4 text-purple-500" size={24} />
+          <p className="text-lg font-montserrat italic text-center px-8">
+            &ldquo;The only way to do great work is to love what you do.&rdquo;
+          </p>
+        </div>
 
         {/* Quote Section */}
         <div className="bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 max-w-2xl mx-auto mb-8 relative">
