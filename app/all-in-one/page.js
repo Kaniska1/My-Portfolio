@@ -170,7 +170,7 @@ export default function Portfolio() {
         {/* Tech Stack Section */}
         <section id="tech-stack" className="my-20">
           <h3 className="text-3xl font-bold mb-8 text-center font-object-sans">My Tech Stack</h3>
-          <div className="space-y-6">
+          <div className="max-w-2xl mx-auto space-y-6">
             {[
               { name: 'Python', percentage: 75 },
               { name: 'Java', percentage: 80 },
