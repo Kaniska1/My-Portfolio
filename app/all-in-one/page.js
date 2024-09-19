@@ -231,7 +231,7 @@ export default function Portfolio() {
               </div>
               <div className="md:w-2/3">
                 <h4 className="text-xl font-semibold mb-2 font-object-sans">Coordina</h4>
-                <p className="font-montserrat mb-4">Coordina is a comprehensive urban management platform designed to transform India's cities for a smarter tomorrow. It offers tools for project management, resource allocation, conflict resolution, and interdepartmental collaboration.</p>
+                <p className="font-montserrat mb-4">Coordina is a comprehensive urban management platform designed to transform India&apos;s cities for a smarter tomorrow. It offers tools for project management, resource allocation, conflict resolution, and interdepartmental collaboration.</p>
                 <p className="font-montserrat mb-4">Our team was placed among select few teams who qualified for the finals of the Smart India Hackathon.</p>
                 <a href="https://coordina-murex.vercel.app" target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:text-purple-600 transition-colors font-montserrat">View Project</a>
               </div>
