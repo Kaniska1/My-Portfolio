@@ -199,45 +199,51 @@ export default function Portfolio() {
         {/* Projects Section */}
         <section id="projects" className="my-20">
           <h3 className="text-3xl font-bold mb-8 text-center font-object-sans">My Projects</h3>
-          <div className="bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-6 backdrop-filter backdrop-blur-lg border border-purple-500">
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="md:w-1/3 mb-4 md:mb-0 md:mr-6">
-                <Image
-                  src="/pHighters.png?height=300&width=300"
-                  alt="AquaSolve - pHighters"
-                  width={300}
-                  height={300}
-                  className="rounded-lg"
-                />
-              </div>
-              <div className="md:w-2/3">
-                <h4 className="text-xl font-semibold mb-2 font-object-sans">AquaSolve - pHighters</h4>
-                <p className="font-montserrat mb-4">A product designed to mitigate ocean acidification and to create valuable products from the extracted acids, fostering a harmonious relationship between environmental conservation and collaborative innovation for the betterment of both businesses and charitable causes.</p>
-                <p className="font-montserrat mb-4">Our team was awarded the Runners-Up position for this project in the On-Campus Hult Prize competition.</p>
-                <a href="https://phighters.netlify.app" target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:text-purple-600 transition-colors font-montserrat">View Project</a>
+          <div className="flex flex-col md:flex-row md:space-x-6">
+            {/* Project 1 */}
+            <div className="bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-6 backdrop-filter backdrop-blur-lg border border-purple-500 md:w-1/2">
+              <div className="flex flex-col md:flex-row items-center">
+                <div className="md:w-1/3 mb-4 md:mb-0 md:mr-6">
+                  <Image
+                    src="/pHighters.png?height=300&width=300"
+                    alt="AquaSolve - pHighters"
+                    width={300}
+                    height={300}
+                    className="rounded-lg"
+                  />
+                </div>
+                <div className="md:w-2/3">
+                  <h4 className="text-xl font-semibold mb-2 font-object-sans">AquaSolve - pHighters</h4>
+                  <p className="font-montserrat mb-4">A product designed to mitigate ocean acidification and to create valuable products from the extracted acids, fostering a harmonious relationship between environmental conservation and collaborative innovation for the betterment of both businesses and charitable causes.</p>
+                  <p className="font-montserrat mb-4">Our team was awarded the Runners-Up position for this project in the On-Campus Hult Prize competition.</p>
+                  <a href="https://phighters.netlify.app" target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:text-purple-600 transition-colors font-montserrat">View Project</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-6 backdrop-filter backdrop-blur-lg border border-purple-500">
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="md:w-1/3 mb-4 md:mb-0 md:mr-6">
-                <Image
-                  src="/Coordina.png?height=150&width=150"
-                  alt="AquaSolve - pHighters"
-                  width={300}
-                  height={300}
-                  className="rounded-lg"
-                />
-              </div>
-              <div className="md:w-2/3">
-                <h4 className="text-xl font-semibold mb-2 font-object-sans">Coordina</h4>
-                <p className="font-montserrat mb-4">Coordina is a comprehensive urban management platform designed to transform India&apos;s cities for a smarter tomorrow. It offers tools for project management, resource allocation, conflict resolution, and interdepartmental collaboration.</p>
-                <p className="font-montserrat mb-4">Our team was placed among select few teams who qualified for the finals of the Smart India Hackathon.</p>
-                <a href="https://coordina-murex.vercel.app" target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:text-purple-600 transition-colors font-montserrat">View Project</a>
+
+            {/* Project 2 */}
+            <div className="bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-6 backdrop-filter backdrop-blur-lg border border-purple-500 md:w-1/2">
+              <div className="flex flex-col md:flex-row items-center">
+                <div className="md:w-1/3 mb-4 md:mb-0 md:mr-6">
+                  <Image
+                    src="/Coordina.png?height=150&width=150"
+                    alt="Coordina"
+                    width={300}
+                    height={300}
+                    className="rounded-lg"
+                  />
+                </div>
+                <div className="md:w-2/3">
+                  <h4 className="text-xl font-semibold mb-2 font-object-sans">Coordina</h4>
+                  <p className="font-montserrat mb-4">Coordina is a comprehensive urban management platform designed to transform India&apos;s cities for a smarter tomorrow. It offers tools for project management, resource allocation, conflict resolution, and interdepartmental collaboration.</p>
+                  <p className="font-montserrat mb-4">Our team was placed among select few teams who qualified for the finals of the Smart India Hackathon.</p>
+                  <a href="https://coordina-murex.vercel.app" target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:text-purple-600 transition-colors font-montserrat">View Project</a>
+                </div>
               </div>
             </div>
           </div>
         </section>
+
       </main>
 
       {/* Footer */}
