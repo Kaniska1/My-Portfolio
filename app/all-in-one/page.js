@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram, Linkedin, Github, Moon, Sun, Computer, Code, Palette, Mic, Quote } from 'lucide-react';
+import { Menu, X, Instagram, Linkedin, Github, Moon, Sun, Computer, Code, Palette, Mic, Quote, Download } from 'lucide-react';
 import Image from 'next/image';
 
 const Loader = () => (
@@ -57,6 +57,16 @@ export default function Portfolio() {
       if (prevTheme === 'light') return 'system';
       return 'dark';
     });
+  };
+
+  const downloadResume = () => {
+    // Replace 'path_to_your_resume.pdf' with the actual path to your resume file
+    const link = document.createElement('a');
+    link.href = '/Resume.pdf';
+    link.download = 'Kaniska_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   if (isLoading) {
@@ -139,9 +149,16 @@ export default function Portfolio() {
             </div>
             <div className="md:w-2/3 md:pl-8">
               <h3 className="text-3xl font-bold mb-4 font-object-sans">About Me</h3>
-              <p className="text-lg font-montserrat">
+              <p className="text-lg font-montserrat mb-4">
                 👋 Hi! I&apos;m Kaniska, a passionate computer science engineering student with a focus on AI, ML, Data Science, and Blockchain. I have embraced both theoretical knowledge and hands-on projects, driven by curiosity. Eager to tackle real-world problems, I aim to contribute to innovative solutions and continuously grow through learning and collaboration.
               </p>
+              <button
+                onClick={downloadResume}
+                className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded inline-flex items-center transition-colors duration-300"
+              >
+                <Download size={20} className="mr-2" />
+                Download My Resume
+              </button>
             </div>
           </div>
         </section>
