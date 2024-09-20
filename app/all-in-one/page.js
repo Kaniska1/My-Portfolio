@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { Menu, Instagram, Linkedin, Github, Moon, Sun, Computer, Code, Palette, Mic, Quote, Download } from 'lucide-react';
+import { Menu, X, Instagram, Linkedin, Github, Moon, Sun, Computer, Code, Palette, Mic, Quote, Download } from 'lucide-react';
 import Image from 'next/image';
 
 const Loader = () => (
@@ -174,13 +174,13 @@ export default function Portfolio() {
                 <h4 className="text-xl font-semibold mb-2 font-object-sans">Bachelor of Science (BS) in Data Science and Programming</h4>
                 <p className="font-montserrat mb-1">Indian Institute of Technology - Madras</p>
                 <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2023 - Present</p>
-                <p className="font-montserrat mt-2">Pursuing my bachelor's degree with a focus on AI, ML, and Data Science.</p>
+                <p className="font-montserrat mt-2">Pursuing my bachelor&apos;s degree with a focus on AI, ML, and Data Science.</p>
               </div>
               <div className="border-l-4 border-red-500 pl-4">
                 <h4 className="text-xl font-semibold mb-2 font-object-sans">B.Tech in Computer Science and Engineering - Internet of Things</h4>
                 <p className="font-montserrat mb-1">Techno Main - Salt Lake</p>
                 <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2023 - Present</p>
-                <p className="font-montserrat mt-2">Pursuing my bachelor's degree with a focus on Internet of Things (IOT).</p>
+                <p className="font-montserrat mt-2">Pursuing my bachelor&apos;s degree with a focus on Internet of Things (IOT).</p>
               </div>
               <div className="border-l-4 border-red-500 pl-4">
                 <h4 className="text-xl font-semibold mb-2 font-object-sans">Primary, Secondary & Higher Secondary Education</h4>
