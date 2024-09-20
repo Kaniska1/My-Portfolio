@@ -184,7 +184,7 @@ export default function Portfolio() {
               </div>
               <div className="border-l-4 border-red-500 pl-4">
                 <h4 className="text-xl font-semibold mb-2 font-object-sans">Primary, Secondary & Higher Secondary Education</h4>
-                <p className="font-montserrat mb-1">W.W.A. Cossipore Enlish School</p>
+                <p className="font-montserrat mb-1">W.W.A. Cossipore English School</p>
                 <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2009 - 2023</p>
                 <p className="font-montserrat mt-2">Completed my schooling with a strong foundation in Science (PCM).</p>
               </div>
