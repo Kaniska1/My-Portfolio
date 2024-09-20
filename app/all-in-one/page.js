@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Instagram, Linkedin, Github, Moon, Sun, Computer, Code, Palette, Mic, Quote, Download } from 'lucide-react';
+import { Menu, Instagram, Linkedin, Github, Moon, Sun, Computer, Code, Palette, Mic, Quote, Download } from 'lucide-react';
 import Image from 'next/image';
 
 const Loader = () => (
@@ -85,10 +85,11 @@ export default function Portfolio() {
       {/* Navbar */}
       <nav className="bg-white dark:bg-black bg-opacity-50 dark:bg-opacity-50 p-4 fixed top-0 left-0 right-0 z-50">
         <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold font-object-sans">Kaniska</h1>
+          <h5 className="text-2xl font-medium font-object-sans">Kaniska.</h5>
           <div className="hidden md:flex space-x-4">
             <a href="#home" className="hover:text-red-300 transition-colors font-montserrat">Home</a>
             <a href="#about" className="hover:text-red-300 transition-colors font-montserrat">About</a>
+            <a href="#education" className="hover:text-red-300 transition-colors font-montserrat">Education</a>
             <a href="#skills" className="hover:text-red-300 transition-colors font-montserrat">Skills</a>
             <a href="#tech-stack" className="hover:text-red-300 transition-colors font-montserrat">Tech Stack</a>
             <a href="#projects" className="hover:text-red-300 transition-colors font-montserrat">Projects</a>
@@ -106,6 +107,7 @@ export default function Portfolio() {
           <div className="md:hidden mt-2 space-y-2">
             <a href="#home" className="block hover:text-red-300 transition-colors font-montserrat">Home</a>
             <a href="#about" className="block hover:text-red-300 transition-colors font-montserrat">About</a>
+            <a href="#education" className="block hover:text-red-300 transition-colors font-montserrat">Education</a>
             <a href="#skills" className="block hover:text-red-300 transition-colors font-montserrat">Skills</a>
             <a href="#tech-stack" className="block hover:text-red-300 transition-colors font-montserrat">Tech Stack</a>
             <a href="#projects" className="block hover:text-red-300 transition-colors font-montserrat">Projects</a>
@@ -159,6 +161,33 @@ export default function Portfolio() {
                 <Download size={20} className="mr-2" />
                 Download My Resume
               </button>
+            </div>
+          </div>
+        </section>
+
+        {/* My Education Section */}
+        <section id="education" className="my-20">
+          <div className="bg-white dark:bg-gray-900 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 max-w-4xl mx-auto backdrop-filter backdrop-blur-lg">
+            <h3 className="text-3xl font-bold mb-6 font-object-sans">My Education</h3>
+            <div className="space-y-6">
+              <div className="border-l-4 border-red-500 pl-4">
+                <h4 className="text-xl font-semibold mb-2 font-object-sans">Bachelor of Science (BS) in Data Science and Programming</h4>
+                <p className="font-montserrat mb-1">Indian Institute of Technology - Madras</p>
+                <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2023 - Present</p>
+                <p className="font-montserrat mt-2">Pursuing my bachelor's degree with a focus on AI, ML, and Data Science.</p>
+              </div>
+              <div className="border-l-4 border-red-500 pl-4">
+                <h4 className="text-xl font-semibold mb-2 font-object-sans">B.Tech in Computer Science and Engineering - Internet of Things</h4>
+                <p className="font-montserrat mb-1">Techno Main - Salt Lake</p>
+                <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2023 - Present</p>
+                <p className="font-montserrat mt-2">Pursuing my bachelor's degree with a focus on Internet of Things (IOT).</p>
+              </div>
+              <div className="border-l-4 border-red-500 pl-4">
+                <h4 className="text-xl font-semibold mb-2 font-object-sans">Primary, Secondary & Higher Secondary Education</h4>
+                <p className="font-montserrat mb-1">W.W.A. Cossipore Enlish School</p>
+                <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2009 - 2023</p>
+                <p className="font-montserrat mt-2">Completed my schooling with a strong foundation in Science (PCM).</p>
+              </div>
             </div>
           </div>
         </section>
