@@ -217,13 +217,13 @@ export default function Portfolio() {
           <h3 className="text-3xl font-bold mb-8 text-center font-object-sans">My Tech Stack</h3>
           <div className="max-w-2xl mx-auto space-y-6">
             {[
-              { name: 'Python', percentage: 75 },
+              { name: 'Python', percentage: 80 },
               { name: 'Java', percentage: 80 },
               { name: 'C', percentage: 70 },
+              { name: 'SQL', percentage: 75 },
+              { name: 'Pandas', percentage: 80 },
               { name: 'HTML', percentage: 60 },
-              { name: 'CSS', percentage: 60 },
-              { name: 'SQL', percentage: 70 },
-              { name: 'Pandas', percentage: 65 }
+              { name: 'CSS', percentage: 60 }              
             ].map((tech) => (
               <div key={tech.name} className="bg-white dark:bg-gray-900 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-4 backdrop-filter backdrop-blur-lg">
                 <div className="flex justify-between mb-2">
