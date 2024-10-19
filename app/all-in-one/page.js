@@ -223,7 +223,7 @@ const Portfolio = () => {
                   <p className="font-montserrat mb-1">IIC TMSL</p>
                   <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">March 2024 - August 2024</p>                </div>
                 <div className="border-l-4 border-red-500 pl-4">
-                  <h4 className="text-xl font-semibold mb-2 font-object-sans">Member of Qzone, The official Quiz Club of TMSL</h4>
+                  <h4 className="text-xl font-semibold mb-2 font-object-sans">Member of Qzone, The Official Quiz Club of TMSL</h4>
                   <p className="font-montserrat mb-1">Eclectica TMSL</p>
                   <p  className="font-montserrat text-sm text-gray-600 dark:text-gray-400">March 2024 - Present</p>                </div>
                 <div className="border-l-4 border-red-500 pl-4">
@@ -342,7 +342,7 @@ const Portfolio = () => {
                 </div>
                 <div className="md:w-2/3">
                   <h4 className="text-xl font-semibold mb-2 font-object-sans">Coordina</h4>
-                  <p className="font-montserrat mb-4">Coordina is a comprehensive urban management platform designed to transform India's cities for a smarter tomorrow. It offers tools for project management, resource allocation, conflict resolution, and interdepartmental collaboration.</p>
+                  <p className="font-montserrat mb-4">Coordina is a comprehensive urban management platform designed to transform India&apos;s cities for a smarter tomorrow. It offers tools for project management, resource allocation, conflict resolution, and interdepartmental collaboration.</p>
                   <p className="font-montserrat mb-4">Our team was placed among select few teams who qualified for the finals of the Smart India Hackathon 2024.</p>
                   <a href="https://coordina-murex.vercel.app" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-600 transition-colors font-montserrat">View Project</a>
                 </div>
