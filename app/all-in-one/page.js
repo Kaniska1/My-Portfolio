@@ -153,7 +153,7 @@ const Portfolio = () => {
             <div className="md:w-2/3 md:pl-8">
               <h3 className="text-3xl font-bold mb-4 font-object-sans text-red-400">About Me</h3>
               <p className="text-lg font-montserrat mb-4">
-                👋 Hi! I'm Kaniska, a passionate computer science engineering student with a focus on AI, ML, Data Science, and Blockchain. I have embraced both theoretical knowledge and hands-on projects, driven by curiosity. Eager to tackle real-world problems, I aim to contribute to innovative solutions and continuously grow through learning and collaboration.
+                👋 Hi! I&apos;m Kaniska, a passionate computer science engineering student with a focus on AI, ML, Data Science, and Blockchain. I have embraced both theoretical knowledge and hands-on projects, driven by curiosity. Eager to tackle real-world problems, I aim to contribute to innovative solutions and continuously grow through learning and collaboration.
               </p>
               <button
                 onClick={downloadResume}
