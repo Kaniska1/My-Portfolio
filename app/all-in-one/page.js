@@ -14,7 +14,7 @@ const Loader = () => (
   </div>
 );
 
-export default function Portfolio() {
+const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState('system');
   const [isLoading, setIsLoading] = useState(true);
@@ -60,7 +60,6 @@ export default function Portfolio() {
   };
 
   const downloadResume = () => {
-    // Replace 'path_to_your_resume.pdf' with the actual path to your resume file
     const link = document.createElement('a');
     link.href = '/Resume.pdf';
     link.download = 'Kaniska_Resume.pdf';
@@ -83,13 +82,14 @@ export default function Portfolio() {
       </div>
 
       {/* Navbar */}
-      <nav className="bg-white dark:bg-black bg-opacity-50 dark:bg-opacity-50 p-4 fixed top-0 left-0 right-0 z-50">
+      <nav className="bg-white dark:bg-black bg-opacity-50 dark:bg-opacity-90 p-4 fixed top-0 left-0 right-0 z-50">
         <div className="container mx-auto flex justify-between items-center">
           <h5 className="text-2xl font-medium font-object-sans">Kaniska.</h5>
           <div className="hidden md:flex space-x-4">
             <a href="#home" className="hover:text-red-300 transition-colors font-montserrat">Home</a>
             <a href="#about" className="hover:text-red-300 transition-colors font-montserrat">About</a>
             <a href="#education" className="hover:text-red-300 transition-colors font-montserrat">Education</a>
+            <a href="#experience" className="hover:text-red-300 transition-colors font-montserrat">Experience</a>
             <a href="#skills" className="hover:text-red-300 transition-colors font-montserrat">Skills</a>
             <a href="#tech-stack" className="hover:text-red-300 transition-colors font-montserrat">Tech Stack</a>
             <a href="#projects" className="hover:text-red-300 transition-colors font-montserrat">Projects</a>
@@ -108,6 +108,7 @@ export default function Portfolio() {
             <a href="#home" className="block hover:text-red-300 transition-colors font-montserrat">Home</a>
             <a href="#about" className="block hover:text-red-300 transition-colors font-montserrat">About</a>
             <a href="#education" className="block hover:text-red-300 transition-colors font-montserrat">Education</a>
+            <a href="#experience" className="block hover:text-red-300 transition-colors font-montserrat">Experience</a>
             <a href="#skills" className="block hover:text-red-300 transition-colors font-montserrat">Skills</a>
             <a href="#tech-stack" className="block hover:text-red-300 transition-colors font-montserrat">Tech Stack</a>
             <a href="#projects" className="block hover:text-red-300 transition-colors font-montserrat">Projects</a>
@@ -150,9 +151,9 @@ export default function Portfolio() {
               />
             </div>
             <div className="md:w-2/3 md:pl-8">
-              <h3 className="text-3xl font-bold mb-4 font-object-sans">About Me</h3>
+              <h3 className="text-3xl font-bold mb-4 font-object-sans text-red-400">About Me</h3>
               <p className="text-lg font-montserrat mb-4">
-                👋 Hi! I&apos;m Kaniska, a passionate computer science engineering student with a focus on AI, ML, Data Science, and Blockchain. I have embraced both theoretical knowledge and hands-on projects, driven by curiosity. Eager to tackle real-world problems, I aim to contribute to innovative solutions and continuously grow through learning and collaboration.
+                👋 Hi! I'm Kaniska, a passionate computer science engineering student with a focus on AI, ML, Data Science, and Blockchain. I have embraced both theoretical knowledge and hands-on projects, driven by curiosity. Eager to tackle real-world problems, I aim to contribute to innovative solutions and continuously grow through learning and collaboration.
               </p>
               <button
                 onClick={downloadResume}
@@ -165,41 +166,97 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* My Education Section */}
-        <section id="education" className="my-20">
-          <div className="bg-white dark:bg-gray-900 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 max-w-4xl mx-auto backdrop-filter backdrop-blur-lg">
-            <h3 className="text-3xl font-bold mb-6 font-object-sans">My Education</h3>
-            <div className="space-y-6">
-              <div className="border-l-4 border-red-500 pl-4">
-                <h4 className="text-xl font-semibold mb-2 font-object-sans">Bachelor of Science (BS) in Data Science and Programming</h4>
-                <p className="font-montserrat mb-1">Indian Institute of Technology - Madras</p>
-                <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2023 - Present</p>
-                <p className="font-montserrat mt-2">Pursuing my bachelor&apos;s degree with a focus on AI, ML, and Data Science.</p>
-              </div>
-              <div className="border-l-4 border-red-500 pl-4">
-                <h4 className="text-xl font-semibold mb-2 font-object-sans">B.Tech in Computer Science and Engineering - Internet of Things</h4>
-                <p className="font-montserrat mb-1">Techno Main - Salt Lake</p>
-                <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2023 - Present</p>
-                <p className="font-montserrat mt-2">Pursuing my bachelor&apos;s degree with a focus on Internet of Things (IOT).</p>
-              </div>
-              <div className="border-l-4 border-red-500 pl-4">
-                <h4 className="text-xl font-semibold mb-2 font-object-sans">Primary, Secondary & Higher Secondary Education</h4>
-                <p className="font-montserrat mb-1">W.W.A. Cossipore English School</p>
-                <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2009 - 2023</p>
-                <p className="font-montserrat mt-2">Completed my schooling with a strong foundation in Science (PCM).</p>
-              </div>
+        {/* New Statistics Section */}
+        <section className="my-20">
+          <div className="bg-white dark:bg-gray-900 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 max-w-4xl mx-auto flex justify-around items-center backdrop-filter backdrop-blur-lg">
+            <div className="text-center">
+              <h3 className="text-5xl font-bold mb-4 font-object-sans text-red-500">1+</h3>
+              <p className="text-lg font-montserrat">YEARS OF EXPERIENCE</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-5xl font-bold mb-4 font-object-sans text-red-500">100+</h3>
+              <p className="text-lg font-montserrat">LEETCODE PROBLEMS SOLVED</p>
             </div>
           </div>
         </section>
 
+        {/* Education and Experience Section */}
+        <div className="flex flex-col lg:flex-row gap-8 my-20">
+          {/* My Education Section */}
+          <section id="education" className="lg:w-1/2">
+            <div className="bg-white dark:bg-gray-900 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 backdrop-filter backdrop-blur-lg h-full">
+              <h3 className="text-3xl font-bold mb-6 font-object-sans text-red-400">My Education</h3>
+              <div className="space-y-6">
+                <div className="border-l-4 border-red-500 pl-4">
+                  <h4 className="text-xl font-semibold mb-2 font-object-sans">Bachelor of Science (BS) in Data Science and Programming</h4>
+                  <p className="font-montserrat mb-1">Indian Institute of Technology - Madras</p>
+                  <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2023 - Present</p>
+                  <p className="font-montserrat mb-1">CGPA: 8.00 (Till date)</p>
+                  <p className="font-montserrat mt-2">Pursuing my bachelor's degree with a focus on AI, ML, and Data Science.</p>
+                </div>
+                <div className="border-l-4 border-red-500 pl-4">
+                  <h4 className="text-xl font-semibold mb-2 font-object-sans">B.Tech in Computer Science and Engineering - Internet of Things</h4>
+                  <p className="font-montserrat mb-1">Techno Main - Salt Lake</p>
+                  <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2023 - Present</p>
+                  <p className="font-montserrat mb-1">CGPA: 8.29 (Till date)</p>
+                  <p className="font-montserrat mt-2">Pursuing my bachelor's degree with a focus on Internet of Things (IOT).</p>
+                </div>
+                <div className="border-l-4 border-red-500 pl-4">
+                  <h4 className="text-xl font-semibold mb-2 font-object-sans">Primary, Secondary & Higher Secondary Education</h4>
+                  <p className="font-montserrat mb-1">W.W.A. Cossipore English School</p>
+                  <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2009 - 2023</p>
+                  <p className="font-montserrat mb-1">ICSE:97.0%</p>
+                  <p className="font-montserrat mb-1">ISC: 94.5%</p>
+                  <p className="font-montserrat mt-2">Completed my schooling with a strong foundation in Science (PCM).</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* My Experiences Section */}
+          <section id="experience" className="lg:w-1/2">
+            <div className="bg-white dark:bg-gray-900 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 backdrop-filter backdrop-blur-lg h-full">
+              <h3 className="text-3xl font-bold mb-6 font-object-sans text-red-400">My Experiences</h3>
+              <div className="space-y-6">
+                <div className="border-l-4 border-red-500 pl-4">
+                  <h4 className="text-xl font-semibold mb-2 font-object-sans">Member of PR and Outreach Wing</h4>
+                  <p className="font-montserrat mb-1">IIC TMSL</p>
+                  <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">March 2024 - August 2024</p>                </div>
+                <div className="border-l-4 border-red-500 pl-4">
+                  <h4 className="text-xl font-semibold mb-2 font-object-sans">Member of Qzone, The official Quiz Club of TMSL</h4>
+                  <p className="font-montserrat mb-1">Eclectica TMSL</p>
+                  <p  className="font-montserrat text-sm text-gray-600 dark:text-gray-400">March 2024 - Present</p>                </div>
+                <div className="border-l-4 border-red-500 pl-4">
+                  <h4 className="text-xl font-semibold mb-2 font-object-sans">Hult Prize On-Campus Runner-Up</h4>
+                  <p className="font-montserrat mb-1">Hult Prize Foundation</p>
+                  <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">February 2024</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
         {/* Skills Section */}
         <section id="skills" className="my-20">
-          <h3 className="text-3xl font-bold mb-8 text-center font-object-sans">My Skills</h3>
+          <h3 className="text-3xl font-bold mb-8 text-center font-object-sans text-red-400">My Skills</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: 'Competitive Coding', icon: <Code size={24} />, description: 'Proficient in solving problems in Java, C and Python' },
-              { name: 'Graphic Designing', icon: <Palette size={24} />, description: 'Creating visually appealing designs and illustrations for various mediums.' },
-              { name: 'Public Speaking', icon: <Mic size={24} />, description: 'Delivering impactful presentations and engaging audiences effectively.' }
+              { 
+                name: 'Competitive Coding', 
+                icon: <Code size={24} />, 
+                description: 'Proficient in solving problems in Java, C and Python', 
+                link: (<a href="https://leetcode.com/Kaniska1" target="_blank" rel="noopener noreferrer" className="text-red-700">My LeetCode Profile</a>), 
+              },
+              { 
+                name: 'Graphic Designing', 
+                icon: <Palette size={24} />, 
+                description: 'Creating visually appealing designs and illustrations for various mediums.' 
+              },
+              { 
+                name: 'Public Speaking', 
+                icon: <Mic size={24} />, 
+                description: 'Delivering impactful presentations and engaging audiences effectively.' 
+              }
             ].map((skill) => (
               <div key={skill.name} className="bg-white dark:bg-gray-900 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-6 transform hover:scale-105 transition-transform backdrop-filter backdrop-blur-lg border border-red-500">
                 <div className="flex items-center mb-4">
@@ -207,6 +264,11 @@ export default function Portfolio() {
                   <h4 className="text-xl font-semibold ml-2 font-object-sans">{skill.name}</h4>
                 </div>
                 <p className="font-montserrat">{skill.description}</p>
+                {skill.link && (
+                  <div className="mt-2">
+                    {skill.link}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -214,13 +276,13 @@ export default function Portfolio() {
 
         {/* Tech Stack Section */}
         <section id="tech-stack" className="my-20">
-          <h3 className="text-3xl font-bold mb-8 text-center font-object-sans">My Tech Stack</h3>
-          <div className="max-w-2xl mx-auto space-y-6">
+          <h3 className="text-3xl font-bold mb-8 text-center font-object-sans text-red-400">My Tech Stack</h3>
+          <div className="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { name: 'Python', percentage: 80 },
               { name: 'Java', percentage: 80 },
               { name: 'C', percentage: 70 },
-              { name: 'SQL', percentage: 75 },
+              { name: 'MySQL', percentage: 75 },
               { name: 'Pandas', percentage: 80 },
               { name: 'HTML', percentage: 60 },
               { name: 'CSS', percentage: 60 }              
@@ -243,7 +305,7 @@ export default function Portfolio() {
 
         {/* Projects Section */}
         <section id="projects" className="my-20">
-          <h3 className="text-3xl font-bold mb-8 text-center font-object-sans">My Projects</h3>
+          <h3 className="text-3xl font-bold mb-8 text-center font-object-sans text-red-400">My Projects</h3>
           <div className="flex flex-col md:flex-row md:space-x-6">
             {/* Project 1 */}
             <div className="bg-white dark:bg-gray-900 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-6 backdrop-filter backdrop-blur-lg border border-red-500 md:w-1/2">
@@ -280,7 +342,7 @@ export default function Portfolio() {
                 </div>
                 <div className="md:w-2/3">
                   <h4 className="text-xl font-semibold mb-2 font-object-sans">Coordina</h4>
-                  <p className="font-montserrat mb-4">Coordina is a comprehensive urban management platform designed to transform India&apos;s cities for a smarter tomorrow. It offers tools for project management, resource allocation, conflict resolution, and interdepartmental collaboration.</p>
+                  <p className="font-montserrat mb-4">Coordina is a comprehensive urban management platform designed to transform India's cities for a smarter tomorrow. It offers tools for project management, resource allocation, conflict resolution, and interdepartmental collaboration.</p>
                   <p className="font-montserrat mb-4">Our team was placed among select few teams who qualified for the finals of the Smart India Hackathon 2024.</p>
                   <a href="https://coordina-murex.vercel.app" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-600 transition-colors font-montserrat">View Project</a>
                 </div>
@@ -288,7 +350,6 @@ export default function Portfolio() {
             </div>
           </div>
         </section>
-
       </main>
 
       {/* Footer */}
@@ -307,4 +368,6 @@ export default function Portfolio() {
       </footer>
     </div>
   );
-}
+};
+
+export default Portfolio;
