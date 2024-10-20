@@ -168,17 +168,23 @@ const Portfolio = () => {
 
         {/* New Statistics Section */}
         <section className="my-20">
-          <div className="bg-white dark:bg-gray-900 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 max-w-4xl mx-auto flex justify-around items-center backdrop-filter backdrop-blur-lg">
+        <div className="flex justify-center items-center space-x-10">
+          <div className="bg-white dark:bg-gray-900 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 w-64 h-64 flex justify-center items-center backdrop-filter backdrop-blur-lg">
             <div className="text-center">
               <h3 className="text-5xl font-bold mb-4 font-object-sans text-red-500">1+</h3>
               <p className="text-lg font-montserrat">YEARS OF EXPERIENCE</p>
             </div>
+          </div>
+          <div className="bg-white dark:bg-gray-900 bg-opacity-50 dark:bg-opacity-50 rounded-lg p-8 w-64 h-64 flex justify-center items-center backdrop-filter backdrop-blur-lg">
             <div className="text-center">
               <h3 className="text-5xl font-bold mb-4 font-object-sans text-red-500">100+</h3>
               <p className="text-lg font-montserrat">LEETCODE PROBLEMS SOLVED</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
+
 
         {/* Education and Experience Section */}
         <div className="flex flex-col lg:flex-row gap-8 my-20">
@@ -190,21 +196,21 @@ const Portfolio = () => {
                 <div className="border-l-4 border-red-500 pl-4">
                   <h4 className="text-xl font-semibold mb-2 font-object-sans">Bachelor of Science (BS) in Data Science and Programming</h4>
                   <p className="font-montserrat mb-1">Indian Institute of Technology - Madras</p>
-                  <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2023 - Present</p>
+                  <p className="font-montserrat mb-1 text-gray-600 dark:text-gray-400">2023 - Present</p>
                   <p className="font-montserrat mb-1">CGPA: 8.00 (Till date)</p>
                   <p className="font-montserrat mt-2">Pursuing my bachelor&apos;s degree with a focus on AI, ML, and Data Science.</p>
                 </div>
                 <div className="border-l-4 border-red-500 pl-4">
                   <h4 className="text-xl font-semibold mb-2 font-object-sans">B.Tech in Computer Science and Engineering - Internet of Things</h4>
                   <p className="font-montserrat mb-1">Techno Main - Salt Lake</p>
-                  <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2023 - Present</p>
+                  <p className="font-montserrat mb-1 text-gray-600 dark:text-gray-400">2023 - Present</p>
                   <p className="font-montserrat mb-1">CGPA: 8.29 (Till date)</p>
                   <p className="font-montserrat mt-2">Pursuing my bachelor&apos;s degree with a focus on Internet of Things (IOT).</p>
                 </div>
                 <div className="border-l-4 border-red-500 pl-4">
                   <h4 className="text-xl font-semibold mb-2 font-object-sans">Primary, Secondary & Higher Secondary Education</h4>
                   <p className="font-montserrat mb-1">W.W.A. Cossipore English School</p>
-                  <p className="font-montserrat text-sm text-gray-600 dark:text-gray-400">2009 - 2023</p>
+                  <p className="font-montserrat mb-1 text-gray-600 dark:text-gray-400">2009 - 2023</p>
                   <p className="font-montserrat mb-1">ICSE:97.0%</p>
                   <p className="font-montserrat mb-1">ISC: 94.5%</p>
                   <p className="font-montserrat mt-2">Completed my schooling with a strong foundation in Science (PCM).</p>
@@ -245,7 +251,7 @@ const Portfolio = () => {
                 name: 'Competitive Coding', 
                 icon: <Code size={24} />, 
                 description: 'Proficient in solving problems in Java, C and Python', 
-                link: (<a href="https://leetcode.com/Kaniska1" target="_blank" rel="noopener noreferrer" className="text-red-700">My LeetCode Profile</a>), 
+                link: (<a href="https://leetcode.com/Kaniska1" target="_blank" rel="noopener noreferrer" className="text-red-400">My LeetCode Profile</a>), 
               },
               { 
                 name: 'Graphic Designing', 
