@@ -4,18 +4,21 @@ import { Button } from "@/components/ui/button"
 const projects = [
   {
     name: "Coordina",
-    description: "A project management tool",
-    image: "/placeholder.svg",
+    description: "Coordina is a smart collaboration platform that streamlines inter-departmental coordination in Indian urban governance to prevent delays and resource waste. We were selected for the finals of the Smart India Hackathon 2024 for this project.",
+    image: "/Coordina.png",
+    link: "https://github.com/Prayas-35/Coordina-v1", // Replace with actual link
   },
   {
     name: "SealiX",
-    description: "A secure document signing platform",
-    image: "/placeholder.svg",
+    description: "A skill passport blockchain-powered Skill Passport verify, protect, and upgrade learners' credentials with privacy and trust. We were selected for the finals of the Smart Bengal Hackathon 2025 for this project.",
+    image: "/Sealix.png",
+    link: "https://github.com/Prayas-35/SealiX", // Replace with actual link
   },
   {
     name: "Portfolio Website",
     description: "Personal portfolio website",
-    image: "/placeholder.svg",
+    image: "/portfolio.png",
+    link: "https://github.com/Kaniska1/My-Portfolio", // Replace with actual link
   },
 ]
 
@@ -41,9 +44,11 @@ export default function Projects() {
             <div className="w-2/3 p-6">
               <h3 className="text-xl font-bold mb-2">{project.name}</h3>
               <p className="mb-4">{project.description}</p>
-              <Button variant="outline" className="border-text text-text hover:text-background hover:bg-text">
-                View Project
-              </Button>
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="border-text text-text hover:text-background hover:bg-text">
+                  View Project
+                </Button>
+              </a>
             </div>
           </div>
         ))}
