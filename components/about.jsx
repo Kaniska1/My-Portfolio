@@ -35,25 +35,28 @@ export default function About() {
               programming.
             </p>
 
-            <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
-            <Link href="../resume.pdf" rel="noopener noreferrer">
+            {/* ✅ Fixed Button Section Starts */}
+            <div className="flex flex-col sm:flex-row gap-4 items-center sm:justify-center md:justify-start">
+              <Link href="../resume.pdf" rel="noopener noreferrer">
                 <Button
                   variant="outline"
-                  className="border-text text-text hover:text-text hover:bg-primary hover:border-primary"
+                  className="border-text text-text hover:text-text hover:bg-primary hover:border-primary w-full sm:w-auto"
                 >
                   View My Resume
                 </Button>
-            </Link>
+              </Link>
               <Link href="https://www.linkedin.com/in/kaniskamitra/" rel="noopener noreferrer">
                 <Button
                   variant="ghost"
-                  className="flex items-center gap-2 text-text hover:text-black hover:bg-accent"
+                  className="flex items-center justify-center gap-2 text-text hover:text-black hover:bg-accent w-full sm:w-auto"
                 >
                   <Linkedin className="h-5 w-5" />
                   LinkedIn
                 </Button>
               </Link>
             </div>
+            {/* ✅ Fixed Button Section Ends */}
+
           </div>
         </div>
 

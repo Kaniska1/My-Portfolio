@@ -43,7 +43,7 @@ export default function Navbar() {
               <li key={item.name}>
                 <Link
                   href={item.href}
-                  className={`text-lg font-medium transition-colors ${
+                  className={`text-sm md:text-lg font-medium transition-colors ${
                     activeSection === item.href.substring(1) ? "text-secondary" : "text-text hover:text-accent"
                   }`}
                 >

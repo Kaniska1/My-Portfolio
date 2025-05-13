@@ -12,8 +12,8 @@ export default function CodingProfiles() {
           <div className="h-48 flex items-center justify-center bg-background border-b border-text">
             <div className="text-center">
               <img
-                  src="../GitHub.png"
-                  alt="My Image"
+                  src="https://midia12.com.br/wp-content/uploads/2024/12/github-1024x576.webp"
+                  alt="Github Profile"
                   className="max-w-full max-h-64 object-contain"
                 />
             </div>
